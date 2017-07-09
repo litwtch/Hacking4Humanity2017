@@ -93,9 +93,16 @@ hr{
 .class_checkbox.checked {
     background-color: #423F6A;
 }
-.check
-{
+.check{
   opacity:0.5;
 	color:#fff;
-
+}
+.btn{
+  width: 100%;
+  margin-top: 10px;
+  background-color: #F02E74;
+  text-decoration: none;
+}
+.btn a{
+  text-decoration: none;
 }
