@@ -78,7 +78,12 @@ p {
     z-index: 10;
     padding-bottom: 10%;
 }
-
+.carousel-text {
+    font-family: 'Average', serif !important;
+    font-size: 32px !important;
+    text-align: center;
+    color: #FFF !important;
+}
 .carousel .item {
     width: 100%;
     height: 550px;
