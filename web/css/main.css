@@ -8,6 +8,7 @@
     text-align: center;
 }
 .container{
+  height: 50px;
   padding: 0;
 }
 .row{
@@ -16,23 +17,23 @@
 /* ----------CAROUSEL----------*/
 #myCarousel{
   width: 100%;
-  position: absolute;
+  position: relative;
   left: 0;
   right: 0;
 }
 .carousel {
-    height: 450px;
-    margin-bottom: 60px;
+  padding-top: 0;
+    height: 550px;
 }
 
 .carousel-caption {
-    margin-top: 0;
     z-index: 10;
+    padding-bottom: 10%;
 }
 
 .carousel .item {
     width: 100%;
-    height: 450px;
+    height: 550px;
     background-color: ;
 }
 .carousel-inner > .item > img {
@@ -40,14 +41,61 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 450px;
+    height: 550px;
 }
 @media (min-width: 768px) {
-    .carousel-caption h3 {
-        margin-bottom: 10%;
+    .carousel-caption h1 {
+        margin-bottom: 15%;
         font-size: 30px;
         line-height: 1.4;
     }
 }
 img {
-    background: red;
+    max-width: 100%;
+    width: auto\9;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* ---------- COUNTDOWN --------- */
+.countdown{
+  background-color: #423F6A;
+  padding-bottom: 10px;
+}
+#countdownTime{
+  font-size: 50px;
+  color: #fff;
+}
+#countdownText{
+  font-size: 15px;
+  color: #fff;
+}
+.row{
+  padding-top: 0px;
+  color: #2E2B4C;
+}
+.action{
+  padding-top: 50px;
+}
+.description{
+  padding-top: 20px;
+}
+hr{
+  width: 5%;
+  border: 2px solid #F02E74;
+}
+
+/*-------CHECKBOX IMAGES ------------*/
+.class_checkbox {
+    width: 50px;
+    height: 50px;
+}
+.class_checkbox.checked {
+    background-color: #423F6A;
+}
+.check
+{
+  opacity:0.5;
+	color:#fff;
+
+}

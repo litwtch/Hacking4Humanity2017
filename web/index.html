@@ -13,6 +13,38 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script>
+  var timeInMinutes = 120;
+  var currentTime = Date.parse(new Date());
+  var countDownDate = new Date(currentTime + timeInMinutes*60*1000);
+
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+
+      // Get todays date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now an the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Output the result in an element with id="demo"
+      document.getElementById("countdownTime").innerHTML = hours + "h : "
+      + minutes + "m : " + seconds + "s";
+
+      // If the count down is over, write some text
+      if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("countdown").innerHTML = "EXPIRED";
+      }
+  }, 1000);
+
+  </script>
   <title>TITLE HERE</title>
 </head>
 
@@ -29,6 +61,7 @@
         </ul>
       </nav>
     </div>
+  </div><!--container-->
 
       <!---CAROUSEL ===============================================-->
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -45,7 +78,7 @@
               <img class="first-slide" src="images/Fact1.jpg" alt="First slide">
               <div class="container">
                 <div class="carousel-caption">
-                  <h3>Human trafficking is one of the most significant human rights issues of the 21st century</h3>
+                  <h1> In 2016, California had the highest number of human trafficking cases by state (1323). Or about 3.5 per day. </h1>
                 </div>
               </div>
             </div>
@@ -54,7 +87,7 @@
               <img class="second-slide" src="images/Fact2.jpg" alt="Second slide">
               <div class="container">
                 <div class="carousel-caption">
-                  <h3>More than one-third of $150 billion in human trafficking profits are from forced labour exploitation, and the remaining two-thirds from sexual exploitation.</h3>
+                  <h1>More than one-third of $150 billion in human trafficking profits are from forced labour exploitation, and the remaining two-thirds from sexual exploitation.</h1>
 
                 </div>
               </div>
@@ -64,7 +97,7 @@
               <img class="third-slide" src="images/Fact3.jpg" alt="Third slide">
               <div class="container">
                 <div class="carousel-caption">
-                  <h3>499 victims of human trafficking were identified by 15 government and community agencies throughout San Francisco in 2015.</h3>
+                  <h1>499 victims of human trafficking were identified by 15 government and community agencies throughout San Francisco in 2015.</h1>
 
                 </div>
               </div>
@@ -74,7 +107,7 @@
               <img class="fourth-slide" src="images/Fact4.jpg" alt="Fourth slide">
               <div class="container">
                 <div class="carousel-caption">
-                  <h3>Of the almost 500 victims, 122 were minors, almost all of whom were victims of commercial sex exploitation.</h3>
+                  <h1>Of the almost 500 victims, 122 were minors, almost all of whom were victims of commercial sex exploitation.</h1>
 
                 </div>
               </div>
@@ -96,24 +129,85 @@
         </div>
       <!--END CAROUSEL====================================================-->
 
-    <div class="row">
+      <div class="row text-center countdown">
+        <h1 id="countdownTime"></h1>
+        <p id="countdownText">Time until the next person calls the National Trafficking Hotline </p>
+      </div>
+
+    <div class="row action">
 
       <div class="col-md-3"></div>
         <div class="col-md-6">
-          <h2 class="text-center">How you can help</h2>
-          <p class="text-center">More descriptions</p>
-          <h2 class="text-center">Most needed categories</h2>
+          <h2 class="text-center">What can you contribute?</h2>
+          <svg height="10" width="500">
+              <line x1="250" y1="0" x2="290" y2="0" style="stroke:rgb(240,46,116);stroke-width:4" />
+          </svg>
+
+          <p class="text-center description">
+              Human trafficking isn't just an international issue. It's happening right here
+              in our own communities. You can help by donating household goods or funding to services
+              and organizations that help women get back on their feet. Select what you're willing
+              to donate, and we'll match you with shelters that will put them to good use.
+          </p>
         </div>
       <div class="col-md-3"></div>
 
     </div>
 
+    <div class="row action">
+
+      <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <h2 class="text-center">Most Needed Items</h2>
+        </div>
+      <div class="col-md-3"></div>
+
+    </div>
+
+    <!--==========ITEM SELECTION============-->
+    <form action="action" method="get">
+    <div class="row action text-center">
+
+      <div class="col-md-3"></div>
+        <div class="col-md-2">
+          <div class="text-center"><img src="icons/money.svg" class="img-check"></div>
+        </div>
+        <div class="col-md-2">
+          <div class="text-center"><img src="icons/underwear.svg" class="img-check"></div>
+        </div>
+        <div class="col-md-2">
+          <h2 class="text-center"><img src="icons/tampon.svg" class="img-check"></h2>
+        </div>
+      <div class="col-md-3"></div>
+
+    </div>
+
+    <div class="row text-center">
+      <div class="col-md-3"></div>
+        <div class="col-md-2">
+          <p class="caption"><input type="checkbox" name="funding" value="funding"> Funding</p>
+        </div>
+        <div class="col-md-2">
+          <p class="caption"><input type="checkbox" name="underwear" value="underwear"> Underwear</p>
+        </div>
+        <div class="col-md-2">
+          <p class="caption"><input type="checkbox" name="hygiene" value="hygiene"> Feminine Hygiene</p>
+        </div>
+      <div class="col-md-3"></div>
+    </div>
 
 
 
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6 text-center">
+        <input type="submit" value="Donate">
+      </div>
+      <div class="col-md-3"></div>
+    </div>
 
 
-  </div><!--container-->
+  </form>
 
   <script>
 
@@ -122,6 +216,12 @@
         interval: 2000
     });
   })
+
+  $(document).ready(function(e){
+    		$(".img-check").click(function(){
+				$(this).toggleClass("check");
+			});
+	});
   </script>
 </body>
 
