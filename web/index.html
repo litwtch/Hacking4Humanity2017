@@ -10,7 +10,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Average|Open+Sans" rel="stylesheet">
+
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script>
@@ -78,7 +83,7 @@
               <img class="first-slide" src="images/Fact1.jpg" alt="First slide">
               <div class="container">
                 <div class="carousel-caption">
-                  <h1> In 2016, California had the highest number of human trafficking cases by state (1323). Or about 3.5 per day. </h1>
+                  <p class="carousel-text"> In 2016, California had the highest number of human trafficking cases by state (1323) - about 3.5 per day. </p>
                 </div>
               </div>
             </div>
@@ -87,7 +92,7 @@
               <img class="second-slide" src="images/Fact2.jpg" alt="Second slide">
               <div class="container">
                 <div class="carousel-caption">
-                  <h1>More than one-third of $150 billion in human trafficking profits are from forced labour exploitation, and the remaining two-thirds from sexual exploitation.</h1>
+                  <p class="carousel-text">More than 2/3 of the $150 billion in human trafficking profits are from sexual exploiration. The remaining 1/3 is from forced labour exploitation.</p>
 
                 </div>
               </div>
@@ -97,7 +102,7 @@
               <img class="third-slide" src="images/Fact3.jpg" alt="Third slide">
               <div class="container">
                 <div class="carousel-caption">
-                  <h1>499 victims of human trafficking were identified by 15 government and community agencies throughout San Francisco in 2015.</h1>
+                  <p class="carousel-text">In 2015, 499 victims of human trafficking were identified by 15 government and community agencies throughout San Francisco.</p>
 
                 </div>
               </div>
@@ -107,7 +112,7 @@
               <img class="fourth-slide" src="images/Fact4.jpg" alt="Fourth slide">
               <div class="container">
                 <div class="carousel-caption">
-                  <h1>Of the almost 500 victims, 122 were minors, almost all of whom were victims of commercial sex exploitation.</h1>
+                  <p class="carousel-text">Of the almost 500 victims in San Francisco, 122 were minors. Almost all of whom were victims of commercial sex exploitation.</p>
 
                 </div>
               </div>
@@ -131,7 +136,7 @@
 
       <div class="row text-center countdown">
         <h1 id="countdownTime"></h1>
-        <p id="countdownText">Time until the next person calls the National Trafficking Hotline </p>
+        <p id="countdownText">Time until someone in California will make another call to the National Trafficking Hotline </p>
       </div>
 
     <div class="row action">
@@ -139,9 +144,7 @@
       <div class="col-md-3"></div>
         <div class="col-md-6">
           <h2 class="text-center">What can you contribute?</h2>
-          <svg height="10" width="500">
-              <line x1="370" y1="0" x2="410" y2="0" style="stroke:rgb(240,46,116);stroke-width:4" />
-          </svg>
+          <div class="hline-bottom"></div>
 
           <p class="text-center description">
               Human trafficking isn't just an international issue. It's happening right here
@@ -159,13 +162,15 @@
       <div class="col-md-3"></div>
         <div class="col-md-6">
           <h2 class="text-center">Most Needed Items</h2>
+          <div class="hline-bottom"></div>
         </div>
+
       <div class="col-md-3"></div>
 
     </div>
 
     <!--==========ITEM SELECTION============-->
-    <form action="results.html" method="get">
+    <form action="action" method="get">
     <div class="row action text-center">
 
       <div class="col-md-3"></div>
@@ -196,12 +201,215 @@
       <div class="col-md-3"></div>
     </div>
 
+    <div class="row action text-center">
+
+      <div class="col-md-3"></div>
+        <div class="col-md-1 checklist-col">
+          <div class="text-center"><img src="icons/shampoo.svg" class="img-check"></div>
+        </div>
+        <div class="col-md-1">
+          <div class="text-center"><img src="icons/toothbrush.svg" class="img-check"></div>
+        </div>
+        <div class="col-md-1">
+          <h2 class="text-center"><img src="icons/towel.svg" class="img-check"></h2>
+        </div>
+        <div class="col-md-1">
+          <div class="text-center"><img src="icons/razor.svg" class="img-check"></div>
+        </div>
+        <div class="col-md-1">
+          <div class="text-center"><img src="icons/toilet-paper.svg" class="img-check"></div>
+        </div>
+        <div class="col-md-1">
+          <h2 class="text-center"><img src="icons/detergent.svg" class="img-check"></h2>
+        </div>
+      <div class="col-md-3"></div>
+
+    </div>
+    <div class="row text-center">
+
+      <div class="col-md-3"></div>
+        <div class="col-md-1">
+          
+          <p class="caption"><input type="checkbox" name="shampoo" value="shampoo"> Shampoo & Conditioner</p>
+        </div>
+        <div class="col-md-1">
+          
+          <p class="caption"><input type="checkbox" name="toothbrush" value="toothbrush"> Toothbrush & Toothpaste</p>
+        </div>
+        <div class="col-md-1">
+          
+          <p class="caption"><input type="checkbox" name="towel" value="towel"> Towels</p>
+        </div>
+        <div class="col-md-1">
+          
+          <p class="caption"><input type="checkbox" name="razor" value="razor"> Razors</p>
+        </div>
+        <div class="col-md-1">
+          
+          <p class="caption"><input type="checkbox" name="toilet-paper" value="toilet-paper"> Toilet Paper</p>
+        </div>
+        <div class="col-md-1">
+          
+          <p class="caption"><input type="checkbox" name="detergent" value="detergent"> Laundry Detergent</p>
+        </div>
+      <div class="col-md-3"></div>
+
+    </div>
+    <div class="row action text-center">
+
+      <div class="col-md-3"></div>
+        <div class="col-md-1 checklist-col">
+          <div class="text-center"><img src="icons/soap.svg" class="img-check"></div>
+        </div>
+        <div class="col-md-1">
+          <div class="text-center"><img src="icons/shirt.svg" class="img-check"></div>
+        </div>
+        <div class="col-md-1">
+          <h2 class="text-center"><img src="icons/sock.svg" class="img-check"></h2>
+        </div>
+        <div class="col-md-1">
+          <div class="text-center"><img src="icons/infant-supplies.svg" class="img-check"></div>
+        </div>
+        <div class="col-md-1">
+          <div class="text-center"><img src="icons/baby-wipes.svg" class="img-check"></div>
+        </div>
+        <div class="col-md-1">
+          <h2 class="text-center"><img src="icons/diaper.svg" class="img-check"></h2>
+        </div>
+      <div class="col-md-3"></div>
+
+    </div>
+    <div class="row text-center">
+
+      <div class="col-md-3"></div>
+        <div class="col-md-1">
+          
+          <p class="caption"><input type="checkbox" name="soap" value="soap"> Soap</p>
+        </div>
+        <div class="col-md-1">
+          
+          <p class="caption"><input type="checkbox" name="shirt" value="shirt"> Clothing</p>
+        </div>
+        <div class="col-md-1">
+          
+          <p class="caption"><input type="checkbox" name="sock" value="sock"> Socks</p>
+        </div>
+        <div class="col-md-1">
+          
+          <p class="caption"><input type="checkbox" name="infant-supplies" value="infant-supplies"> Infant Supplies</p>
+        </div>
+        <div class="col-md-1">
+          
+          <p class="caption"><input type="checkbox" name="baby-wipes" value="baby-wipes"> Baby Wipes</p>
+        </div>
+        <div class="col-md-1">
+          
+          <p class="caption"><input type="checkbox" name="diaper" value="diaper"> Diapers</p>
+        </div>
+      <div class="col-md-3"></div>
+
+    </div>
+    <div class="row action text-center">
+
+      <div class="col-md-3"></div>
+        <div class="col-md-1 checklist-col">
+          <div class="text-center"><img src="icons/notepad.svg" class="img-check"></div>
+        </div>
+        <div class="col-md-1">
+          <div class="text-center"><img src="icons/sticky-notes.svg" class="img-check"></div>
+        </div>
+        <div class="col-md-1">
+          <h2 class="text-center"><img src="icons/pen.svg" class="img-check"></h2>
+        </div>
+        <div class="col-md-1">
+          <div class="text-center"><img src="icons/trash-bags.svg" class="img-check"></div>
+        </div>
+        <div class="col-md-1">
+          <div class="text-center"><img src="icons/blankets.svg" class="img-check"></div>
+        </div>
+        <div class="col-md-1">
+          <h2 class="text-center"><img src="icons/sofa.svg" class="img-check"></h2>
+        </div>
+      <div class="col-md-3"></div>
+
+    </div>
+    <div class="row text-center">
+
+      <div class="col-md-3"></div>
+        <div class="col-md-1">
+          
+          <p class="caption"><input type="checkbox" name="notepads" value="notepads"> Notepads</p>
+        </div>
+        <div class="col-md-1">
+          
+          <p class="caption"><input type="checkbox" name="sticky-notes" value="sticky-notes"> Sticky Notes</p>
+        </div>
+        <div class="col-md-1">
+          
+          <p class="caption"><input type="checkbox" name="pen" value="pen"> Pens</p>
+        </div>
+        <div class="col-md-1">
+          
+          <p class="caption"><input type="checkbox" name="trash-bags" value="trash-bags"> Trash Bags</p>
+        </div>
+        <div class="col-md-1">
+          
+          <p class="caption"><input type="checkbox" name="blankets" value="blankets"> Blankets</p>
+        </div>
+        <div class="col-md-1">
+          
+          <p class="caption"><input type="checkbox" name="sofa" value="sofa"> Furniture</p>
+        </div>
+        
+      <div class="col-md-3"></div>
+
+    </div>
+
+    <div class="row action text-center">
+
+      <div class="col-md-3"></div>
+        <div class="col-md-1">
+          <div class="text-center"><img src="icons/bart.svg" class="img-check"></div>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-1"></div>
+        <div class="col-md-1"></div>
+        <div class="col-md-1"></div>
+        <div class="col-md-1"></div>
+      <div class="col-md-3"></div>
+
+    </div>
+    <div class="row text-center">
+
+      <div class="col-md-3"></div>
+        <div class="col-md-1">
+          <p class="caption"><input type="checkbox" name="bart" value="bart"> BART/MUNI Tickets</p>
+        </div>
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-1">
+          
+        </div>
+        <div class="col-md-1">
+          
+        </div>
+        <div class="col-md-1">
+          
+        </div>
+        <div class="col-md-1">
+          
+        </div>
+        
+      <div class="col-md-3"></div>
+
+    </div>
+
 
 
     <div class="row">
       <div class="col-md-3"></div>
       <div class="col-md-6 text-center">
-        <input type="submit" value="Donate">
+        <input type="submit" value="Donate" class="btn">
       </div>
       <div class="col-md-3"></div>
     </div>
@@ -218,10 +426,10 @@
   })
 
   $(document).ready(function(e){
-    		$(".img-check").click(function(){
-				$(this).toggleClass("check");
-			});
-	});
+        $(".img-check").click(function(){
+        $(this).toggleClass("check");
+      });
+  });
   </script>
 </body>
 
