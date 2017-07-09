@@ -106,3 +106,9 @@ hr{
 .btn a{
   text-decoration: none;
 }
+#logo{
+  width: 60%;
+}
+form{
+  margin-bottom: 10%;
+}
