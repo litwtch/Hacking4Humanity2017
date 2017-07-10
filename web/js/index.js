@@ -113,7 +113,7 @@ var controller = {
   getShelters: function(needs){
     return new Promise(function(resolve,reject){
     //Update url to our github repository for this project
-    var url = 'http://www.maribelduran.com/testing/js/ShelterDictionary.JSON';
+    var url = 'https://github.com/cosmonaught/Hacking4Humanity2017/blob/master/js/ShelterDictionary.JSON';
     var request = new XMLHttpRequest();
     request.open('GET', url, true);
     request.onload = function() {
