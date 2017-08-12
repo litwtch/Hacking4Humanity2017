@@ -113,7 +113,7 @@ var controller = {
   getShelters: function(needs){
     return new Promise(function(resolve,reject){
     //Update url to our github repository for this project
-    var url = 'https://github.com/cosmonaught/Hacking4Humanity2017/blob/master/js/ShelterDictionary.JSON';
+    var url = 'https://cosmonaught.github.io/Hacking4Humanity2017/web/js/ShelterDictionary.JSON';
     var request = new XMLHttpRequest();
     request.open('GET', url, true);
     request.onload = function() {
@@ -178,27 +178,22 @@ postShelters: function(shelter){
   a.appendChild(btn); 
 
 
-  
-
-   console.log(shelterUl)
+console.log(shelterUl)
        
 });
 }
 };
 
-function getUrlVars()
-{
-    var vars = [], hash;
-    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+function getUrlVars(){
+  var vars = [], hash;
+  var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
 
-    for(var i = 0; i < hashes.length; i++)
-        {
-         hash = hashes[i].split('=');
-         vars.push(hash[0]);
-         //vars[hash[0]] = hash[1];
-         }
-
-     return vars;
+  for(var i = 0; i < hashes.length; i++)
+  {
+    hash = hashes[i].split('=');
+    vars.push(hash[0]);
+  }
+  return vars;
 }
 
 var needs = getUrlVars();
