@@ -22,51 +22,47 @@
   var timeInMinutes = 120;
   var currentTime = Date.parse(new Date());
   var countDownDate = new Date(currentTime + timeInMinutes*60*1000);
-
   // Update the count down every 1 second
   var x = setInterval(function() {
-
       // Get todays date and time
       var now = new Date().getTime();
-
       // Find the distance between now an the count down date
       var distance = countDownDate - now;
-
       // Time calculations for days, hours, minutes and seconds
       var days = Math.floor(distance / (1000 * 60 * 60 * 24));
       var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
       // Output the result in an element with id="demo"
       document.getElementById("countdownTime").innerHTML = hours + "h : "
       + minutes + "m : " + seconds + "s";
-
       // If the count down is over, write some text
       if (distance < 0) {
           clearInterval(x);
           document.getElementById("countdown").innerHTML = "EXPIRED";
       }
   }, 1000);
-
   </script>
   <title>EmpowHerSF</title>
 </head>
 
 <body>
-  <div class="container">
+  <div class="container-fluid">
 
     <div class="header">
       <nav class="navbar">
         <a class="navbar-brand" href="#"><img id="logo" src="images/EmpowHer-SF.svg"></a>
+        <!--
         <ul class="nav navbar-nav">
           <li><a href="#"></a></li>
           <li><a href="#"></a></li>
           <li><a href="#"></a></li>
         </ul>
+        -->
       </nav>
     </div>
-  </div><!--container-->
+  
+  <div id="cover">
 
       <!---CAROUSEL ===============================================-->
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -81,11 +77,11 @@
 
             <div class="item active">
               <img class="first-slide" src="images/Fact1.jpg" alt="First slide">
-              <div class="container">
+             <!-- <div class="container"> -->
                 <div class="carousel-caption">
                   <p class="carousel-text"> In 2016, California had the highest number of human trafficking cases by state (1323) - about 3.5 per day. </p>
                 </div>
-              </div>
+           <!--   </div> -->
             </div>
 
             <div class="item">
@@ -100,22 +96,21 @@
 
             <div class="item">
               <img class="third-slide" src="images/fact3.jpg" alt="Third slide">
-              <div class="container">
+               <!-- <div class="container"> -->
                 <div class="carousel-caption">
                   <p class="carousel-text">In 2015, 499 victims of human trafficking were identified by 15 government and community agencies throughout San Francisco.</p>
 
                 </div>
-              </div>
+             <!--   </div> -->
             </div>
 
             <div class="item">
               <img class="fourth-slide" src="images/fact4.jpg" alt="Fourth slide">
-              <div class="container">
+              <!-- <div class="container"> -->
                 <div class="carousel-caption">
                   <p class="carousel-text">Of the almost 500 victims in San Francisco, 122 were minors. Almost all of whom were victims of commercial sex exploitation.</p>
-
                 </div>
-              </div>
+              <!--   </div> -->
             </div>
 
 
@@ -138,6 +133,8 @@
         <h1 id="countdownTime"></h1>
         <p id="countdownText">Time until someone in California will make another call to the National Trafficking Hotline </p>
       </div>
+
+      </div> <!-- end cover -->
 
     <div class="row action">
 
@@ -172,7 +169,6 @@
     <!--==========ITEM SELECTION============-->
     <form action="results.html" method="get" target="_blank>
     <div class="row action text-center">
-
       <div class="col-md-3"></div>
         <div class="col-md-2">
           <div class="text-center"><img src="icons/money.svg" class="img-check"></div>
@@ -184,9 +180,7 @@
           <h2 class="text-center"><img src="icons/tampon.svg" class="img-check"></h2>
         </div>
       <div class="col-md-3"></div>
-
     </div>
-
     <div class="row text-center">
       <div class="col-md-3"></div>
         <div class="col-md-2">
@@ -200,9 +194,7 @@
         </div>
       <div class="col-md-3"></div>
     </div>
-
     <div class="row action text-center">
-
       <div class="col-md-3"></div>
         <div class="col-md-1 checklist-col">
           <div class="text-center"><img src="icons/shampoo.svg" class="img-check"></div>
@@ -223,10 +215,8 @@
           <h2 class="text-center"><img src="icons/detergent.svg" class="img-check"></h2>
         </div>
       <div class="col-md-3"></div>
-
     </div>
     <div class="row text-center">
-
       <div class="col-md-3"></div>
         <div class="col-md-1">
           
@@ -253,10 +243,8 @@
           <p class="caption"><input type="checkbox" name="detergent" value="detergent"> Laundry Detergent</p>
         </div>
       <div class="col-md-3"></div>
-
     </div>
     <div class="row action text-center">
-
       <div class="col-md-3"></div>
         <div class="col-md-1 checklist-col">
           <div class="text-center"><img src="icons/soap.svg" class="img-check"></div>
@@ -277,10 +265,8 @@
           <h2 class="text-center"><img src="icons/diaper.svg" class="img-check"></h2>
         </div>
       <div class="col-md-3"></div>
-
     </div>
     <div class="row text-center">
-
       <div class="col-md-3"></div>
         <div class="col-md-1">
           
@@ -307,10 +293,8 @@
           <p class="caption"><input type="checkbox" name="diaper" value="diaper"> Diapers</p>
         </div>
       <div class="col-md-3"></div>
-
     </div>
     <div class="row action text-center">
-
       <div class="col-md-3"></div>
         <div class="col-md-1 checklist-col">
           <div class="text-center"><img src="icons/notepad.svg" class="img-check"></div>
@@ -331,10 +315,8 @@
           <h2 class="text-center"><img src="icons/sofa.svg" class="img-check"></h2>
         </div>
       <div class="col-md-3"></div>
-
     </div>
     <div class="row text-center">
-
       <div class="col-md-3"></div>
         <div class="col-md-1">
           
@@ -362,11 +344,8 @@
         </div>
         
       <div class="col-md-3"></div>
-
     </div>
-
     <div class="row action text-center">
-
       <div class="col-md-3"></div>
         <div class="col-md-1">
           <div class="text-center"><img src="icons/bart.svg" class="img-check"></div>
@@ -377,10 +356,8 @@
         <div class="col-md-1"></div>
         <div class="col-md-1"></div>
       <div class="col-md-3"></div>
-
     </div>
     <div class="row text-center">
-
       <div class="col-md-3"></div>
         <div class="col-md-1">
           <p class="caption"><input type="checkbox" name="bart" value="bart"> BART/MUNI Tickets</p>
@@ -401,11 +378,7 @@
         </div>
         
       <div class="col-md-3"></div>
-
     </div>
-
-
-
     <div class="row">
       <div class="col-md-3"></div>
       <div class="col-md-6 text-center">
@@ -413,25 +386,19 @@
       </div>
       <div class="col-md-3"></div>
     </div>
-
-
   </form>
-
   <script>
-
   $('#myCarousel').on('slide.bs.carousel', function () {
     $('#myCarousel').carousel({
         interval: 2000
     });
   })
-
   $(document).ready(function(e){
-    		$(".img-check").click(function(){
-				$(this).toggleClass("check");
-			});
-	});
+        $(".img-check").click(function(){
+        $(this).toggleClass("check");
+      });
+  });
   </script>
+  </div><!--container-->
 </body>
-
-
 </html>
