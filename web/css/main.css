@@ -1,13 +1,13 @@
 /* -----STYLE----------*/
 h1 {
     font-family: 'Average', serif !important;
-    font-size: 32px !important;
+    font-size: 32px;
     text-align: center;
-    color: #4a4a4a !important;
+    color: #4a4a4a;
 }
 h2 {
     font-family: 'Average', serif !important;
-    font-size: 32px !important;
+    font-size: 32px;
     text-align: center;
     color: #4a4a4a !important;
 }
@@ -19,16 +19,15 @@ h2 {
 }
 p {
     font-family: OpenSans, sans-serif !important;
-    font-size: 16px !important;
-    line-height: 1.6 !important;
+    font-size: 16px;
+    line-height: 1.6;
     text-align: center;
-    color: #423f6a !important;
 }
 .carousel-text {
     font-family: 'Average', serif !important;
-    font-size: 32px !important;
+    font-size: 32px;
     text-align: center;
-    color: #FFF !important;
+    color: #FFF;
 }
 .btn {
   color: #FFF;
@@ -39,6 +38,7 @@ p {
   text-transform: uppercase;
   border-radius: 0px !important;
   box-shadow: none;
+  width: 100%;
 }
 .btn:hover {
   color: #FFF !important;
@@ -47,6 +47,11 @@ p {
 
 
 /* -----NAVIGATION----------*/
+
+.navbar{
+  margin-bottom: 0 !important;
+}
+
 .navbar .navbar-nav {
     display: inline-block;
     float: none;
@@ -55,78 +60,141 @@ p {
 .navbar .navbar-collapse {
     text-align: center;
 }
-.container{
-  height: 50px;
-  padding: 0;
-}
 .row{
   position: relative;
 }
 /* ----------CAROUSEL----------*/
+
+/*https://designmodo.com/design-type-photo/*/
+#cover {
+  height: 80vh;
+  background-image: url(../images/Fact4.jpg);  
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  overflow: hidden;
+  background-color: white;
+
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
 #myCarousel{
-  width: 100%;
   position: relative;
   left: 0;
   right: 0;
 }
 .carousel {
   padding-top: 0;
-    height: 550px;
+  width: 100%;
+  height: 75%;
+}
+
+.carousel-inner{
+  height: 100%;
+  width: 100%;
 }
 
 .carousel-caption {
-    z-index: 10;
-    padding-bottom: 10%;
+  bottom: 40px !important;
+ 
 }
 .carousel-text {
     font-family: 'Average', serif !important;
-    font-size: 32px !important;
+    font-size: 30px;
+    margin-bottom: 20px !important;
     text-align: center;
     color: #FFF !important;
 }
+
 .carousel .item {
     width: 100%;
-    height: 550px;
-    background-color: ;
+    height: 100%;  
 }
+
 .carousel-inner > .item > img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 550px;
+  height: 100%;
+  width: 100%;
 }
+
 @media (min-width: 768px) {
-    .carousel-caption h1 {
-        margin-bottom: 15%;
-        font-size: 30px;
-        line-height: 1.4;
-    }
+  .carousel-caption h1 {
+     margin-bottom: 15%;
+     font-size: 30px;
+     line-height: 1.4;
+   }
+
+  #countdownTime{
+   font-size: 60px !important;
+ }
 }
+
 img {
     max-width: 100%;
-    width: auto\9;
-    height: auto;
+    width: 100px
+    height: 100px
     vertical-align: middle;
 }
+
+@media only screen and (max-width: 767px) { 
+  #cover{
+    background-attachment: scroll;
+  } 
+
+  .carousel-text {
+    font-size: 24px !important;
+  }
+
+  .carousel-inner > .item > img {
+   width:100%;
+   height: 100% !important;
+  }
+ #countDownText{
+  font-size: 12px !important;
+ }
+}
+
 
 /* ---------- COUNTDOWN --------- */
 .countdown{
   background-color: #423F6A;
-  padding-bottom: 10px;
+  height: 25%;
+  position: relative;
 }
+
+.countdown > .col-md-12{
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.center {
+    margin: 0;
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+
 #countdownTime{
-  font-size: 50px;
+  font-size: 40px;
   color: #fff;
 }
 #countdownText{
   font-size: 15px;
-  color: #fff;
+  min-height: 30px;
+  color: #fff !important;
 }
-.row{
-  padding-top: 0px;
-  color: #2E2B4C;
-}
+
 .action{
   padding-top: 50px;
 }
@@ -138,6 +206,7 @@ hr{
   border: 2px solid #F02E74;
 }
 
+
 /*-------CHECKBOX IMAGES ------------*/
 .class_checkbox {
     width: 50px;
@@ -148,10 +217,16 @@ hr{
 }
 .check{
   opacity:0.5;
-	color:#fff;
+  filter:saturate(8);
 }
+
+.check .caption{
+  opacity:0.5;
+   filter:saturate(8);
+}
+
 .btn{
-  width: 100%;
+  width: 100% !important;
   margin-top: 10px;
   background-color: #F02E74;
   text-decoration: none;
@@ -162,6 +237,28 @@ hr{
 #logo{
   width: 60%;
 }
-form{
-  margin-bottom: 10%;
+
+.item-row{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-end;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.img-check{
+  cursor: pointer;
+   transition: transform .4s;
+}
+
+.caption{
+  margin-top: 30px;
+}
+
+.col-sm-4 {
+  margin-bottom: 30px !important;
+}
+
+.img-check:hover{
+   transform: scale(1.10);  
 }
