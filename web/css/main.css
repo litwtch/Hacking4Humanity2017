@@ -1,3 +1,4 @@
+Skip to content
 /* -----STYLE----------*/
 h1 {
     font-family: 'Average', serif !important;
@@ -67,21 +68,44 @@ p {
 
 /*https://designmodo.com/design-type-photo/*/
 #cover {
-  height: 80vh;
-  background-image: url(../images/Fact4.jpg);  
-  background-position: left center;
+  height: 90vh;
+  margin-left: -15px;
+  margin-right: -15px;
+  overflow: hidden;
+}
+
+.background{
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: cover;
+  background-size: auto;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  overflow: hidden;
   background-color: white;
-
-  margin-left: -15px;
-  margin-right: -15px;
 }
+
+.first-slide-img{
+  background-image: url(../images/Fact1.jpg);
+  background-position: bottom;
+  
+}
+
+.second-slide-img{
+  background-image: url(../images/Fact2.jpg);
+  background-position: center center;
+}
+
+.third-slide-img{
+  background-image: url(../images/fact3.jpg);
+  background-position: center center;
+}
+
+.fourth-slide-img{
+  background-image: url(../images/fact4.jpg);
+  background-position:  left center;
+}
+
+
 
 #myCarousel{
   position: relative;
@@ -89,9 +113,8 @@ p {
   right: 0;
 }
 .carousel {
-  padding-top: 0;
   width: 100%;
-  height: 75%;
+  height: 80%;
 }
 
 .carousel-inner{
@@ -141,7 +164,7 @@ img {
 }
 
 @media only screen and (max-width: 767px) { 
-  #cover{
+  .background{
     background-attachment: scroll;
   } 
 
@@ -162,7 +185,7 @@ img {
 /* ---------- COUNTDOWN --------- */
 .countdown{
   background-color: #423F6A;
-  height: 25%;
+  height: 20%;
   position: relative;
 }
 
@@ -183,7 +206,6 @@ img {
     padding-right: 15px;
     padding-left: 15px;
 }
-
 
 #countdownTime{
   font-size: 40px;
@@ -239,16 +261,19 @@ hr{
 }
 
 .item-row{
-  display: flex;
-  flex-flow: row wrap;
+  display: flex !important;
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
   align-items: flex-end;
   padding-left: 50px;
   padding-right: 50px;
+  align-items: flex-end; 
 }
 
 .img-check{
   cursor: pointer;
-   transition: transform .4s;
+  transition: transform .4s;
 }
 
 .caption{
