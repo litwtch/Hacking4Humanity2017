@@ -82,7 +82,6 @@ var controller = {
     };
     request.send();
   },
-
   retrieveShelters: function(needs){
     var list = new shelterList();
      var requests = [];
@@ -108,7 +107,6 @@ var controller = {
   }.bind(this)).catch(function(error) {
   // One or more promises was rejected
   }.bind(this));
-  
   },
   getShelters: function(needs){
     return new Promise(function(resolve,reject){
@@ -177,17 +175,18 @@ postShelters: function(shelter){
   btn.innerHTML = "Donate"
   a.appendChild(btn); 
 
-
 console.log(shelterUl)
        
 });
-}
+},
+showSelectedNeeds: function(needs){
+    document.getElementById("shelterNeedsSelection").innerHTML = needs.join(', ');
+  }
 };
 
 function getUrlVars(){
   var vars = [], hash;
   var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-
   for(var i = 0; i < hashes.length; i++)
   {
     hash = hashes[i].split('=');
@@ -197,7 +196,7 @@ function getUrlVars(){
 }
 
 var needs = getUrlVars();
-console.log(needs);
+controller.showSelectedNeeds(needs);
 controller.retrieveShelters(needs);
 
 var view = {
