@@ -1,4 +1,3 @@
-Skip to content
 /* -----STYLE----------*/
 h1 {
     font-family: 'Average', serif !important;
@@ -9,8 +8,8 @@ h1 {
 h2 {
     font-family: 'Average', serif !important;
     font-size: 32px;
-    text-align: center;
-    color: #4a4a4a !important;
+  
+    color: #4a4a4a;
 }
 .hline-bottom {
     padding-bottom: 10px;
@@ -22,7 +21,7 @@ p {
     font-family: OpenSans, sans-serif !important;
     font-size: 16px;
     line-height: 1.6;
-    text-align: center;
+   
 }
 .carousel-text {
     font-family: 'Average', serif !important;
@@ -33,22 +32,25 @@ p {
 .btn {
   color: #FFF;
   background-color: #F02E74;
-  padding: 12px 100px !important;
-  border: 0 none;
+  padding: 12px  !important;
   font-weight: 700;
   text-transform: uppercase;
   border-radius: 0px !important;
-  box-shadow: none;
   width: 100%;
+  margin-top: 10px;
 }
 .btn:hover {
   color: #FFF !important;
   background-color: #FF82AF;
 }
 
+.btn a{
+  text-decoration: none !important;
+  color: white;
+}
+
 
 /* -----NAVIGATION----------*/
-
 .navbar{
   margin-bottom: 0 !important;
 }
@@ -68,7 +70,7 @@ p {
 
 /*https://designmodo.com/design-type-photo/*/
 #cover {
-  height: 90vh;
+  height: 85vh;
   margin-left: -15px;
   margin-right: -15px;
   overflow: hidden;
@@ -105,7 +107,6 @@ p {
   background-position:  left center;
 }
 
-
 #myCarousel{
   position: relative;
   left: 0;
@@ -113,7 +114,7 @@ p {
 }
 .carousel {
   width: 100%;
-  height: 80%;
+  height: 75%;
 }
 
 .carousel-inner{
@@ -152,7 +153,7 @@ p {
    }
 
   #countdownTime{
-   font-size: 60px !important;
+   font-size: 40px !important;
  }
 }
 
@@ -185,8 +186,13 @@ img {
 /* ---------- COUNTDOWN --------- */
 .countdown{
   background-color: #423F6A;
-  height: 20%;
+   color: #fff !important;
+  height: 25%;
+  padding-top: 20px;
+  padding-bottom: 20px;
   position: relative;
+  overflow: hidden;
+
 }
 
 .countdown > .col-md-12{
@@ -205,16 +211,17 @@ img {
     transform: translate(-50%, -50%);
     padding-right: 15px;
     padding-left: 15px;
+
 }
 
 #countdownTime{
   font-size: 40px;
-  color: #fff;
 }
 #countdownText{
-  font-size: 15px;
-  min-height: 30px;
-  color: #fff !important;
+padding: 10px;
+font-size: 14px;
+ min-height: 20px;
+ 
 }
 
 .action{
@@ -247,27 +254,24 @@ hr{
    filter:saturate(8);
 }
 
-.btn{
-  width: 100% !important;
-  margin-top: 10px;
-  background-color: #F02E74;
-  text-decoration: none;
-}
-.btn a{
-  text-decoration: none;
-}
 #logo{
   width: 60%;
 }
 
 .item-row{
+<<<<<<< HEAD
   display: flex !important;
   display: -webkit-flex;
+  
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   align-items: flex-end;
   padding-left: 50px;
   padding-right: 50px;
+=======
+  display: flex;
+  flex-flow: row wrap;
+>>>>>>> 93683ab4c80c475b84a3ed4c0ab7405576a90e28
   align-items: flex-end; 
 }
 
@@ -277,13 +281,35 @@ hr{
 }
 
 .caption{
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .col-sm-4 {
-  margin-bottom: 30px !important;
+  margin-bottom: 30px;
 }
 
 .img-check:hover{
    transform: scale(1.10);  
 }
+
+/*-------SHELTERS ------------*/
+
+.shelter-card{
+  width: 320px;
+  height: 400px;
+  margin-bottom: 40px;
+  text-align: left !important;
+  border-style: solid;
+  border-color: rgba(51, 122, 183, 0.10);
+  border-width: thin;
+  border-radius: 5px;
+  box-shadow: 0 12px 12px 0 #D3D3D3;
+  box-sizing: border-box;
+  background-color: white;
+  /*-- similar to Boostrap's center-block class--*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
