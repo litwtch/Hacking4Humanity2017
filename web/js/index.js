@@ -132,52 +132,47 @@ var controller = {
 },
 postShelters: function(shelter){
   console.log(shelter);
-  var shelterUl = document.getElementById("shelterList");
-  shelterUl.innerHTML = ""; 
-
-  var row = document.createElement("div");
-  row.className = "row";
-  row.classList.add("action");
-  shelterUl.appendChild(row); 
+  var shelterList = document.getElementById("shelter-list");
+  shelterList.innerHTML = ""; 
 
   shelter.forEach(function(s){
-  
-  var col_3 = document.createElement("div");
-  col_3.className = "col-md-3";
-  row.appendChild(col_3); 
 
-  var col3 = document.createElement("div");
-  col3.className = "col-md-3";
-  col_3.appendChild(col3); 
+    var col_md_4 = document.createElement("div");
+    col_md_4.className = "col-md-4";
+    col_md_4.classList.add('col-sm-6');
+    shelterList.appendChild(col_md_4); 
 
-   //Creates small logo image element
-  var user_img = document.createElement("img");
-  user_img.src = "images/shelter.png"
-  col3.appendChild(user_img); 
+    var shelterCard = document.createElement("div");
+    shelterCard.className = "shelter-card";
+    col_md_4.appendChild(shelterCard); 
 
-  var h4 = document.createElement("h4");
-  h4.id = "shelterName"
-  h4.innerHTML = s.name;
-  col3.appendChild(h4); 
+    var cardImg = document.createElement("div");
+    cardImg.className = "card-img";
+    shelterCard.appendChild(cardImg); 
 
-  var p = document.createElement("p");
-  p.innerHTML = "The shelter needs: " + s.needs;
-  col3.appendChild(p); 
+    var card_img_src = document.createElement("img");
+    card_img_src.className = "card-img_src";
+    card_img_src.classList.add('center-block');
+    /*This will be updated in the future with corresponding shelter images */
+    card_img_src.src = "images/shelter.png"
+    cardImg.appendChild(card_img_src); 
 
-  var a = document.createElement("a");
-  a.href = s.website;
-  a.target  = "_blank";
-  
-  col3.appendChild(a);
+    var h4 = document.createElement("h4");
+    h4.id = "shelterName"
+    h4.innerHTML = s.name;
+    shelterCard.appendChild(h4); 
 
-  var btn = document.createElement("button");
-  btn.className = "btn";
-  btn.innerHTML = "Donate"
-  a.appendChild(btn); 
+    var p = document.createElement("p");
+    p.innerHTML = "The shelter needs: " + s.needs;
+    shelterCard.appendChild(p); 
 
-console.log(shelterUl)
-       
-});
+    var a = document.createElement("a");
+    a.href = s.website;
+    a.target  = "_blank";
+    a.className = "btn";
+    a.innerHTML ="Donate"
+    shelterCard.appendChild(a); 
+ });
 },
 showSelectedNeeds: function(needs){
     document.getElementById("shelterNeedsSelection").innerHTML = needs.join(', ');
@@ -190,12 +185,13 @@ function getUrlVars(){
   for(var i = 0; i < hashes.length; i++)
   {
     hash = hashes[i].split('=');
-    vars.push(hash[0]);
+    vars.push(hash[1]);
   }
   return vars;
 }
 
 var needs = getUrlVars();
+console.log(needs);
 controller.showSelectedNeeds(needs);
 controller.retrieveShelters(needs);
 
