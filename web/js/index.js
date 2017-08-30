@@ -170,9 +170,11 @@ postShelters: function(shelter){
     a.href = s.website;
     a.target  = "_blank";
     a.className = "btn";
+    a.classList.add('donateBtn');
     a.innerHTML ="Donate"
     shelterCard.appendChild(a); 
  });
+  view.setUpEventListeners();
 },
 showSelectedNeeds: function(needs){
     document.getElementById("shelterNeedsSelection").innerHTML = needs.join(', ');
@@ -197,6 +199,16 @@ controller.retrieveShelters(needs);
 
 var view = {
   setUpEventListeners: function(){
+
+    var donateBtns =  document.getElementsByClassName("donateBtn");
+    for (var i = 0; i < donateBtns.length; i++) {
+      donateBtns[i].addEventListener("click", function(){
+           $("#myModal").modal();
+      
+      });
+    }
+  }
+    /*
     //set up an event listener for a submit button or click button that will give us the needs list
     document.getElementById("submitNeeds").addEventListener("click", function(){
       
@@ -205,8 +217,8 @@ var view = {
       var needs = ["socks", "baby wipes"];
       controller.retrieveShelters(needs);
      });
-  }
+     */
 };
 
 controller.initApp();
-//view.setUpEventListeners();
+view.setUpEventListeners();
