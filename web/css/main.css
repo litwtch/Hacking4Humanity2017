@@ -65,6 +65,7 @@ p {
 }
 .row{
   position: relative;
+ 
 }
 /* ----------CAROUSEL----------*/
 
@@ -184,20 +185,14 @@ img {
 
 
 /* ---------- COUNTDOWN --------- */
-.countdown{
+.purple-header{
   background-color: #423F6A;
-   color: #fff !important;
+  color: #fff !important;
   height: 25%;
   padding-top: 20px;
   padding-bottom: 20px;
   position: relative;
   overflow: hidden;
-
-}
-
-.countdown > .col-md-12{
-  margin-right: 0;
-  margin-left: 0;
 }
 
 .center {
@@ -237,23 +232,6 @@ hr{
 
 
 /*-------CHECKBOX IMAGES ------------*/
-.class_checkbox {
-    width: 50px;
-    height: 50px;
-}
-.class_checkbox.checked {
-    background-color: #423F6A;
-}
-.check{
-  opacity:0.5;
-  filter:saturate(8);
-}
-
-.check .caption{
-  opacity:0.5;
-   filter:saturate(8);
-}
-
 #logo{
   width: 60%;
 }
@@ -272,12 +250,14 @@ hr{
   display: flex;
   flex-flow: row wrap;
 >>>>>>> 93683ab4c80c475b84a3ed4c0ab7405576a90e28
-  align-items: flex-end; 
+  align-items: flex-start; 
 }
 
 .img-check{
   cursor: pointer;
   transition: transform .4s;
+  height: 100px;
+  width: 100px;
 }
 
 .caption{
@@ -292,19 +272,86 @@ hr{
    transform: scale(1.10);  
 }
 
-/*-------SHELTERS ------------*/
-
-.shelter-list{
- display: flex !important;
-  display: -webkit-flex;
-  
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-  
-  justify-content: space-between;
+.img-check-main:hover{
+  transform: scale(1.10);  
 }
 
+/*--Main three items */
+.img-check-main{
+  width: 180px;
+  height: 130px;
+}
+
+@media only screen and (max-width: 550px){
+ .img-check-main{
+  height: 120px !important;
+  width: 110px !important;
+ }
+}
+
+
+/*
+https://codepen.io/maribelduran/pen/oePYjv
+*/
+input[type="checkbox"][name="item"] {
+  display: none;
+}
+
+label {
+  border: 1px solid #fff;
+  padding: 10px;
+  display: block;
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
+  font-weight: normal !important;
+
+}
+
+label:before {
+  background-color: white;
+  color: white;
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  border: 1px solid grey;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 28px;
+  transition-duration: 0.45s;
+  transform: scale(0);
+}
+
+label img {
+  transition-duration: 0.2s;
+  transform-origin: 50% 50%;
+}
+
+:checked + label {
+  border-color: #ddd;
+}
+
+:checked + label:before {
+  content: "✓";
+  background-color: grey;
+  transform: scale(1);
+}
+
+:checked + label img {
+  box-shadow: 0 0 5px #333;
+  z-index: -1;
+}
+
+
+
+/*-------SHELTERS ------------*/
+
 .shelter-card{
+
   width: 350px;
   height: 420px;
   margin-bottom: 40px;
@@ -343,9 +390,6 @@ p.needs{
 
 /* ---------- BOOTSTRAP MODAL --------- */
 
-
-
-
 .pink-highlights{
   background: #F02E74;
   color: #fff;
@@ -373,7 +417,12 @@ p.needs{
  }
 
 .emphasize-text{
- font-size: 18px;
+ font-size: 20px;
  }
+
+ .pink-highlights > p{
+  font-size: 12px;
+ } 
+
 }
 
