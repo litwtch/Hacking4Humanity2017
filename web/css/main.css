@@ -294,8 +294,18 @@ hr{
 
 /*-------SHELTERS ------------*/
 
+.shelter-list{
+ display: flex !important;
+  display: -webkit-flex;
+  
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  
+  justify-content: space-between;
+}
+
 .shelter-card{
-  width: 360px;
+  width: 350px;
   height: 420px;
   margin-bottom: 40px;
   text-align: left !important;
@@ -331,7 +341,39 @@ p.needs{
 }
 
 
+/* ---------- BOOTSTRAP MODAL --------- */
 
 
 
+
+.pink-highlights{
+  background: #F02E74;
+  color: #fff;
+  padding: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.modal-body{
+  margin: 15%;
+  margin-top: 10px;
+}
+
+.modal-body > h2{
+  font-size: 24px;
+}
+
+.emphasize-text{
+ font-size: 22px;
+}
+
+@media only screen and (max-width: 550px){
+ .modal-body > h2{
+  font-size: 20px;
+ }
+
+.emphasize-text{
+ font-size: 18px;
+ }
+}
 
