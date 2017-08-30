@@ -284,8 +284,8 @@ hr{
 
 @media only screen and (max-width: 550px){
  .img-check-main{
-  height: 120px !important;
-  width: 110px !important;
+  height: 120px;
+  width: 110px;
  }
 }
 
@@ -298,14 +298,10 @@ input[type="checkbox"][name="item"] {
 }
 
 label {
-  border: 1px solid #fff;
-  padding: 10px;
   display: block;
   position: relative;
-  margin: 10px;
   cursor: pointer;
   font-weight: normal !important;
-
 }
 
 label:before {
@@ -327,7 +323,7 @@ label:before {
 }
 
 label img {
-  transition-duration: 0.2s;
+  transition-duration: 0.4s;
   transform-origin: 50% 50%;
 }
 
@@ -342,16 +338,13 @@ label img {
 }
 
 :checked + label img {
-  box-shadow: 0 0 5px #333;
+  box-shadow: 0 0 3px #333;
   z-index: -1;
 }
-
-
 
 /*-------SHELTERS ------------*/
 
 .shelter-card{
-
   width: 350px;
   height: 420px;
   margin-bottom: 40px;
