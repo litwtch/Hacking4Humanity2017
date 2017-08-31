@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta property="og:type" content="website" />
+  <meta property="og:title" content="EmpowerHerSF" />
+  <meta property="og:description" content="Focuses on providing awareness and funding to local SF women shelters." />
+  <meta property="og:image" content="https://github.com/maribelduran/Hacking4Humanity2017/blob/master/web/images/fact4.jpg" />
+  <meta property="fb:app_id" content="128614334435665" />
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <!-- Latest compiled and minified CSS -->
@@ -21,6 +26,45 @@
 </head>
 
 <body>
+<script>
+  /*Initializes and loads the Facebook SDK for Javascript*/
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '128614334435665',
+      xfbml      : true,
+      version    : 'v2.10'
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+
+    /* Twitter widgets.js script*/
+window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+  return t;
+}(document, "script", "twitter-wjs"));
+</script>
+
+
+
   <div class="container-fluid">
      <div class="header">
       <nav class="navbar">
@@ -50,13 +94,12 @@
           <p><span class="emphasize-text">Inspire</span><br> your community to join the movement!</p>
         </div>
 
-        <div class="social-media-btns">
-         <a class="social-media-btn" href=""><i class="fa fa-facebook size-40 outline-pink" aria-hidden="true" ></i></a>
-        <a class="social-media-btn" href=""><i class="fa fa-twitter size-40  outline-pink" aria-hidden="true"></i></a>
-       <a class="social-media-btn" href=""><i class="fa fa-instagram  size-40 outline-pink" aria-hidden="true"></i></a>
-        <a class="social-media-btn" href=""><i class="fa fa-envelope size-40 outline-pink" aria-hidden="true"></i></a>
+        <div class="social-media">
+         <a id="btn-share-fb" class="social-media-btn"><i class="fa fa-facebook size-40 outline-pink" ></i></a>
+        <a id="button-share-tweet" class="social-media-btn" href="https://twitter.com/intent/tweet?text=I am fighting against Human Trafficking by helping women shelters in SF! Join the movement!&hashtags=StopHumanTrafficking &url=http://www.maribelduran.com/Hacking4Humanity2017" target="_blank"><i class="fa fa-twitter size-40  outline-pink" ></i></a>  
+        <a href="mailto:?subject=Help%20Us%20Fight%20Human%20Trafficking&body=EmpowerHerSF%20matched me%20with%20SF%20women%20shelters%20that%20need%20household%20items%20that%20I%20am%20willing%20to donate.%20Come%20join%20the%20movement%20to%20fight%20against%20human%20trafficking!%20http://www.maribelduran.com/Hacking4Humanity2017" class="social-media-btn" href=""><i class="fa fa-envelope size-40 outline-pink" aria-hidden="true"></i></a>
         </div>
-          
+         
           
         </div>
         
