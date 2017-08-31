@@ -235,12 +235,8 @@ var view = {
    
     for (var i = 0; i < donateBtns.length; i++) {
       donateBtns[i].addEventListener("click", function(){
-         event.preventDefault();
          	var url = $(this).attr('href'); 
            $("#myModal").modal("show");
-              $("#myModal").on('hidden.bs.modal', function () {
-            	 window.open(url, '_blank');
-        });
 		});
    }
    }
