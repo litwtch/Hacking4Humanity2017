@@ -4,12 +4,30 @@ function shelterList(){
   this.shelters = [];
 }
 
+shelterList.prototype.addShelter = function(name, wishlist, needs, website){
+  this.shelters.push({
+      name: name,
+      wishlist: wishlist,
+      needs:needs,
+      website: website
+    });
+}
+
+shelterList.prototype.sortShelters = function(){
+  var filteredShelters = this.shelters.sort(function(s1, s2){
+    return s1.needs.length > s2.needs.length;
+      //return s1.name.toLowerCase().localeCompare(s2.name.toLowerCase());
+  });
+  this.shelters.reverse();
+  
+}
+
+/**** Will move to needs.js to propagate index.js needs list ***/
 function shelterApp(){
   this.shelters = [];
   this.needs = [];
   this.facts = [];
 }
-
 function shelter(name, wishlist, needs, website){
   this.name = name;
   this.wishlist = wishlist;
@@ -21,15 +39,6 @@ shelterApp.prototype.addShelter = function(name, wishlist, needs, website){
   var s = new shelter(name, wishlist, needs, website);
   console.log(s);
   this.shelters.push(s);
-}
-
-shelterList.prototype.addShelter = function(name, wishlist, needs, website){
-  this.shelters.push({
-      name: name,
-      wishlist: wishlist,
-      needs:needs,
-      website: website
-    });
 }
 
 shelterApp.prototype.addNeeds = function(list){
@@ -47,6 +56,8 @@ var model = {
   }
 };
 
+
+/*********** Global functions *********/
 var findOne = function (haystack, arr) {
   return arr.some(function (v) {
     return haystack.indexOf(v) >= 0;
@@ -101,6 +112,7 @@ var controller = {
     }))
 
   Promise.all(requests).then(function(results) {
+    list.sortShelters(); 
     this.postShelters(list.shelters);
   }.bind(this)).catch(function(error) {
   // One or more promises was rejected
@@ -185,7 +197,8 @@ postShelters: function(shelter){
   view.setUpEventListeners();
 },
 showSelectedNeeds: function(needs){
-	if( needs[0] != undefined){
+  
+	if( needs[0] !== "undefined" && needs[0] !== undefined){
     document.getElementById("shelterNeedsSelection").innerHTML = needs.join(', ');
   }else{
   	 document.getElementById("description").innerHTML = "You did not select any items.";
