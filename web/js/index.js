@@ -20,7 +20,6 @@ shelterList.prototype.sortShelters = function(){
       //return s1.name.toLowerCase().localeCompare(s2.name.toLowerCase());
   });
   this.shelters.reverse();
-  
 }
 
 /**** Will move to needs.js to propagate index.js needs list ***/
@@ -71,7 +70,17 @@ var capitalizeNeeds = function(needs){
   });
   return capitalizedWords;
 }
-
+/*Parameters for the Share Dialog in Facebook SDk*/
+var fbShareDialogParams = {
+  method: 'share',
+  display: 'popup',
+  mobile_iframe: true,
+  href: 'http://www.maribelduran.com/Hacking4Humanity2017/web/index.html',
+  picture: 'https://github.com/maribelduran/Hacking4Humanity2017/blob/master/web/images/EmpowHer-SF.svg',
+  description: 'I am fighting against Human Trafficking by helping women shelters in SF. Come join the movement.',
+  caption: 'EMPOWERHER:SF',
+  quote: 'Be the change that you wish to see in the world.” -Gandhi',
+};
 
 
 /*********** Controller *********/
@@ -204,10 +213,9 @@ postShelters: function(shelter){
     a.innerHTML ="Donate"
     wrapper.appendChild(a); 
  });
-  view.setUpEventListeners();
+  view.addEventListeners();
 },
 showSelectedNeeds: function(needs){
-  
 	if( needs[0] !== "undefined" && needs[0] !== undefined){
     document.getElementById("shelterNeedsSelection").innerHTML = capitalizeNeeds(needs).join(', ');
   }else{
@@ -230,19 +238,26 @@ function getUrlVars(){
 
 /*********** View *********/
 var view = {
-  setUpEventListeners: function(){
+  addEventListeners: function(){
     var donateBtns= document.getElementsByClassName("donateBtn");
-   
     for (var i = 0; i < donateBtns.length; i++) {
       donateBtns[i].addEventListener("click", function(){
-         	var url = $(this).attr('href'); 
+         //	var url = $(this).attr('href'); 
            $("#myModal").modal("show");
-		});
-   }
-   }
+		  });
+    }
+ },
+ setUpEventListeners: function(){
+   var btn_share_fb=document.getElementById("btn-share-fb");
+   btn_share_fb.addEventListener("click", function(){
+      FB.ui(fbShareDialogParams, function(response) {});
+    });
+  }
 };
 
+/*********** Initializating Results.HTML *********/
 controller.initApp();
+view.setUpEventListeners();
 var needs = getUrlVars();
 controller.showSelectedNeeds(needs);
 controller.retrieveShelters(needs);
