@@ -8,7 +8,6 @@ h1 {
 h2 {
     font-family: 'Average', serif !important;
     font-size: 32px;
-  
     color: #4a4a4a;
 }
 .hline-bottom {
@@ -93,7 +92,6 @@ p {
 .first-slide-img{
   background-image: url(../images/Fact1.jpg);
   background-position: bottom;
-  
 }
 
 .second-slide-img{
@@ -176,6 +174,8 @@ p {
  #countDownText{
   font-size: 12px !important;
  }
+
+
 }
 
 
@@ -359,7 +359,7 @@ label img {
   border-style: solid;
   border-color: rgba(51, 122, 183, 0.10);
   border-width: thin;
-  border-radius: 5px;
+  border-radius: 2px;
   box-shadow: 0 12px 12px 0 #D3D3D3;
   box-sizing: border-box;
   padding: 20px;
@@ -425,6 +425,24 @@ label img {
  font-size: 22px;
 }
 
+.size-40{
+  font-size: 40px !important;
+}
+
+.outline-pink {
+    color: white;
+    text-shadow: -1px 0 #F02E74, 0 1px #F02E74, 1px 0 #F02E74, 0 -1px #F02E74
+}
+
+.social-media-btns{
+  display: flex;
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex-flow: row wrap;  
+  justify-content: space-between;
+}
+
 @media only screen and (max-width: 550px){
  .modal-body > h2{
   font-size: 20px;
@@ -438,4 +456,5 @@ label img {
   font-size: 12px;
  } 
 }
+
 
