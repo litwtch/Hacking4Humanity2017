@@ -42,7 +42,6 @@ var model = {
   app: {},
   initApp: function(){
     this.app = new shelterApp();
-
   }
 };
 
@@ -56,7 +55,6 @@ var controller = {
   initApp: function(){
     model.initApp();
     //this.getNeeds();
-    //this.getShelters(["socks", "baby wipes"]);
   },
   getNeeds: function(){
     //Update url to our github repository for this project
@@ -70,7 +68,6 @@ var controller = {
       var needs= obj["needs"];
       model.app.addNeeds(needs);
       });
-      console.log(model.app.needs);
       //userList.sortUsers();
       //view.displayUsers(userList.users);
     }else{
@@ -94,7 +91,6 @@ var controller = {
           var commonNeeds = needs.filter(function(n){
               return obj.needs.indexOf(n) !== -1;
           });
-          //model.app.addShelter(obj.shelter, obj.wishList, commonNeeds, obj.website);
           list.addShelter(obj.shelter, obj.wishList, commonNeeds, obj.website);
         }
       });
@@ -131,12 +127,11 @@ var controller = {
  });
 },
 postShelters: function(shelter){
-  console.log(shelter);
   var shelterList = document.getElementById("shelter-list");
   shelterList.innerHTML = ""; 
 
   shelter.forEach(function(s){
-
+   
     var col_md_4 = document.createElement("div");
     col_md_4.className = "col-md-4";
     col_md_4.classList.add('col-sm-6');
@@ -159,11 +154,16 @@ postShelters: function(shelter){
 
     var h4 = document.createElement("h4");
     h4.id = "shelterName"
+    h4.className = "name";
     h4.innerHTML = s.name;
     shelterCard.appendChild(h4); 
 
     var p = document.createElement("p");
-    p.innerHTML = "The shelter needs: " + s.needs;
+    var needStr = "";
+    s.needs.forEach(function(item){
+        needStr += item + ", ";
+    });
+    p.innerHTML = "Needs: " + needStr.substr(0,needStr.length-2);
     shelterCard.appendChild(p); 
 
     var a = document.createElement("a");
@@ -177,48 +177,44 @@ postShelters: function(shelter){
   view.setUpEventListeners();
 },
 showSelectedNeeds: function(needs){
+	if( needs[0] != undefined){
     document.getElementById("shelterNeedsSelection").innerHTML = needs.join(', ');
+  }else{
+  	 document.getElementById("description").innerHTML = "You did not select any items.";
   }
+ }
 };
 
 function getUrlVars(){
   var vars = [], hash;
   var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-  for(var i = 0; i < hashes.length; i++)
-  {
+
+  for(var i = 0; i < hashes.length; i++){
     hash = hashes[i].split('=');
-    vars.push(hash[1]);
+    var item = decodeURIComponent(hash[1]).replace("+", " ");
+    vars.push(item);
   }
   return vars;
 }
 
-var needs = getUrlVars();
-console.log(needs);
-controller.showSelectedNeeds(needs);
-controller.retrieveShelters(needs);
-
 var view = {
   setUpEventListeners: function(){
-
-    var donateBtns =  document.getElementsByClassName("donateBtn");
+    var donateBtns= document.getElementsByClassName("donateBtn");
+   
     for (var i = 0; i < donateBtns.length; i++) {
       donateBtns[i].addEventListener("click", function(){
-           $("#myModal").modal();
-      
-      });
-    }
-  }
-    /*
-    //set up an event listener for a submit button or click button that will give us the needs list
-    document.getElementById("submitNeeds").addEventListener("click", function(){
-      
-    //var url = 'http://www.maribelduran.com/testing/js/ShelterDictionary.JSON';
-    //window.location = 
-      var needs = ["socks", "baby wipes"];
-      controller.retrieveShelters(needs);
-     });
-     */
+         event.preventDefault();
+         	var url = $(this).attr('href'); 
+           $("#myModal").modal("show");
+              $("#myModal").on('hidden.bs.modal', function () {
+            	 window.open(url, '_blank');
+        });
+		});
+   }
+   }
 };
 
 controller.initApp();
-view.setUpEventListeners();
+var needs = getUrlVars();
+controller.showSelectedNeeds(needs);
+controller.retrieveShelters(needs);
