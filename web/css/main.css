@@ -175,7 +175,6 @@ p {
   font-size: 12px !important;
  }
 
-
 }
 
 
@@ -244,10 +243,7 @@ img {
   padding-left: 50px;
   padding-right: 50px;
 =======
-  display: flex;
-  flex-flow: row wrap;
 >>>>>>> 93683ab4c80c475b84a3ed4c0ab7405576a90e28
-  align-items: flex-start; 
 }
 
 .img-check{
@@ -434,13 +430,17 @@ label img {
     text-shadow: -1px 0 #F02E74, 0 1px #F02E74, 1px 0 #F02E74, 0 -1px #F02E74
 }
 
-.social-media-btns{
+.social-media{
   display: flex;
   display: -webkit-flex;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
   flex-flow: row wrap;  
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.social-media-btn{
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 550px){
