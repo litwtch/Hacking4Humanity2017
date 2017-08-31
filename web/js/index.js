@@ -13,6 +13,7 @@ shelterList.prototype.addShelter = function(name, wishlist, needs, website){
     });
 }
 
+//Sorts shelters from highest to lowest based on number of items needed
 shelterList.prototype.sortShelters = function(){
   var filteredShelters = this.shelters.sort(function(s1, s2){
     return s1.needs.length > s2.needs.length;
@@ -63,6 +64,14 @@ var findOne = function (haystack, arr) {
     return haystack.indexOf(v) >= 0;
     });
 };
+
+var capitalizeNeeds = function(needs){
+  var capitalizedWords =  needs.map(function(str){
+      return str.replace(/\b\w/g, function(l){ return l.toUpperCase() });
+  });
+  return capitalizedWords;
+}
+
 
 
 /*********** Controller *********/
@@ -180,7 +189,8 @@ postShelters: function(shelter){
 
     var p = document.createElement("p");
     var needStr = "";
-    s.needs.forEach(function(item){
+    var capitalizedNeeds = capitalizeNeeds(s.needs);
+    capitalizedNeeds.forEach(function(item){
         needStr += item + ", ";
     });
     p.innerHTML = "Needs: " + needStr.substr(0,needStr.length-2);
@@ -199,7 +209,7 @@ postShelters: function(shelter){
 showSelectedNeeds: function(needs){
   
 	if( needs[0] !== "undefined" && needs[0] !== undefined){
-    document.getElementById("shelterNeedsSelection").innerHTML = needs.join(', ');
+    document.getElementById("shelterNeedsSelection").innerHTML = capitalizeNeeds(needs).join(', ');
   }else{
   	 document.getElementById("description").innerHTML = "You did not select any items.";
   }
