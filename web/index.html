@@ -48,7 +48,6 @@
 
 <body>
   <div class="container-fluid">
-
     <div class="header">
       <nav class="navbar">
         <a class="navbar-brand" href="#"><img id="logo" src="images/EmpowHer-SF.svg"></a>
@@ -61,9 +60,8 @@
         -->
       </nav>
     </div>
-  
-  <div id="cover">
 
+  <div id="cover">
       <!---CAROUSEL ===============================================-->
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
@@ -134,7 +132,7 @@
   </div>
 
     <!--==========ITEM SELECTION============-->
-    <form action="results.html" method="get" target="_blank" class="items">
+    <form action="results.html" method="get" target="_blank">
      <div class="row action text-center ">
       <div class="col-md-4 col-xs-4">
          <input type="checkbox" id="money" name="item" value="money" class="img-check/">
@@ -147,11 +145,11 @@
           <p class="caption">Underwear</p></label>
       </div>
         <div class="col-md-4 col-xs-4">
-         <input type="checkbox" id="hygiene" name="item" value="hygiene" class="img-check"/>
-          <label for="hygiene"><img src="icons/tampon.svg" class="img-check-main">
+         <input type="checkbox" id="feminine hygiene" name="item" value="feminine hygiene" class="img-check"/>
+          <label for="feminine hygiene"><img src="icons/tampon.svg" class="img-check-main">
           <p class="caption">Feminine Hygiene</p></label>
         </div>
-      </div>
+      </div> <!-- end div-->
 
       <div class="row action text-center item-row">
         <div class="col-md-2  col-sm-4 col-xs-6">
@@ -159,96 +157,102 @@
           <label for="soap"><img src="icons/soap.svg" class="img-check">
           <p class="caption">Soap</p></label>
        </div>
-        
       <div class="col-md-2  col-sm-4 col-xs-6">
         <input type="checkbox" id="clothing" name="item" value="clothing"/>
           <label for="clothing"><img src="icons/shirt.svg" class="img-check">
           <p class="caption">Clothing</p></label>
       </div>
-
       <div class="col-md-2  col-sm-4 col-xs-6">
         <input type="checkbox" id="socks" name="item" value="socks"/>
           <label for="socks"><img src="icons/sock.svg" class="img-check">
-          <p class="caption">Socks</p></label>
+         <p class="caption">Socks</p></label>
      </div>
       <div class="col-md-2  col-sm-4 col-xs-6">
-             <div class="text-center"><img src="icons/infant-supplies.svg" class="img-check"></div>
-          <p class="caption"><input type="checkbox" name="item" value="baby supplies">Infant Supplies</p>
+      <input type="checkbox" id="baby supplies" name="item" value="baby supplies"/>
+          <label for="baby supplies"><img src="icons/infant-supplies.svg" class="img-check">
+         <p class="caption">Infant Supplies</p></label>
       </div>
       <div class="col-md-2  col-sm-4 col-xs-6">
-         <div class="text-center"><img src="icons/baby-wipes.svg" class="img-check"></div>
-          <p class="caption"><input type="checkbox" name="item" value="baby wipes">Baby Wipes</p>
-      </div>
-      <div class="col-md-2  col-sm-4 col-xs-6">
-            <div class="text-center"><img src="icons/diaper.svg" class="img-check"></div>
-            <p class="caption"><input type="checkbox" name="item" value="diapers">Diapers</p>
-      </div>
-       <div class="col-md-2  col-sm-4 col-xs-6">
-      <div class="text-center"><img src="icons/notepad.svg" class="img-check"></div>
-        <p class="caption"><input type="checkbox" name="item" value="notepads">Notepads</p>
-    </div>
-    <div class="col-md-2  col-sm-4 col-xs-6">
-        <div class="text-center"><img src="icons/sticky-notes.svg" class="img-check"></div>
-           <p class="caption"><input type="checkbox" name="item" value="sticky notes">Sticky Notes</p>
-    </div>
-    <div class="col-md-2  col-sm-4 col-xs-6">
-       <h2 class="text-center"><img src="icons/pen.svg" class="img-check"></h2>
-       <p class="caption"><input type="checkbox" name="item" value="pens">Pens</p>
-    </div>
-    <div class="col-md-2  col-sm-4 col-xs-6">
-      <div class="text-center"><img src="icons/trash-bags.svg" class="img-check"></div>
-      <p class="caption"><input type="checkbox" name="item" value="trash bags">Trash Bags</p>
-    </div>
-    <div class="col-md-2  col-sm-4 col-xs-6">
-      <div class="text-center"><img src="icons/blankets.svg" class="img-check"></div>
-       <p class="caption"><input type="checkbox" name="item" value="blankets">Blankets</p>
-    </div>
-    <div class="col-md-2  col-sm-4 col-xs-6">
-      <div class="text-center"><img src="icons/sofa.svg" class="img-check"></div>
-        <p class="caption"><input type="checkbox" name="item" value="sofa"> Furniture</p>
-    </div>
-    <div class="col-md-2  col-sm-4 col-xs-6">
+       <input type="checkbox" id='baby wipes' name="item" value="baby wipes">
+        <label for='baby wipes'><img src="icons/baby-wipes.svg" class="img-check">
+       <p class="caption">Baby Wipes</p></label>
+       </div>
 
-       <input type="checkbox" id="bart tickets" name="item"" value="bart tickets"/>
-          <label for="bart tickets"><img src="icons/bart.svg" class="img-check"/>
-          <p class="caption">BART/MUNI Tickets</p></label>
-    </div>
-     
-      
       <div class="col-md-2  col-sm-4 col-xs-6">
-          <img src="icons/shampoo.svg" class="img-check">
-             <p class="caption"><input type="checkbox" name="item" value="shampoo">Shampoo & Conditioner</p>
+        <input type="checkbox" id="diapers" name="item" value="diapers">
+         <label for="diapers"><img src="icons/diaper.svg" class="img-check">
+        <p class="caption">Diapers</p></label>
       </div>
-      <div class="col-md-2 col-sm-4 col-xs-6">
-          <img src="icons/toothbrush.svg" class="img-check">
-           <p class="caption"><input type="checkbox" name="item"" value="toothbrush/paste">Toothbrush & Toothpaste</p>
-          </div>
-      <div class="col-md-2 col-sm-4 col-xs-6">
-       <img src="icons/towel.svg" class="img-check">
-         <p class="caption"><input type="checkbox" name="item" value="towels">Towels</p>
-        </div>
-      <div class="col-md-2 col-sm-4 col-xs-6">
-        <div class="text-center"><img src="icons/razor.svg" class="img-check"></div>
-          <p class="caption"><input type="checkbox" name="item"" value="razor">Razors</p>
-      </div>
-      <div class="col-md-2 col-sm-4 col-xs-6">
-        <div class="text-center"><img src="icons/toilet-paper.svg" class="img-check"></div>
-          <p class="caption"><input type="checkbox" name="item" value="toilet paper">Toilet Paper</p>
-      </div>
-      <div class="col-md-2 col-sm-4 col-xs-6">
-        <div class="text-center"><img src="icons/detergent.svg" class="img-check"></div>
-          <p class="caption"><input type="checkbox" name="item" value="laundry detergent">Laundry Detergent</p>
-      </div>
-  </div>
-
+      <div class="col-md-2  col-sm-4 col-xs-6">
+        <input type="checkbox" id="notepads" name="item" value="notepads"/>
+         <label for="notepads"><img src="icons/notepad.svg" class="img-check">
+        <p class="caption">Notepads</p></label>
+    </div>
+    <div class="col-md-2  col-sm-4 col-xs-6">
+       <input type="checkbox" id="sticky notes" name="item" value="sticky notes">
+         <label for="sticky notes"><img src="icons/sticky-notes.svg" class="img-check">
+        <p class="caption">Sticky Notes</p></label>
+    </div>
+    
+    <div class="col-md-2 col-sm-4 col-xs-6">
+     <input type="checkbox" id='pens' name="item" value="pens">
+         <label for='pens'><img src="icons/pen.svg" class="img-check">
+        <p class="caption">Pens</p></label>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-6">
+     <input type="checkbox" id="trash bags" name="item" value="trash bags">
+         <label for="trash bags"><img src="icons/trash-bags.svg" class="img-check">
+        <p class="caption">Trash Bags</p></label>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-6">
+     <input type="checkbox" id="blankets" name="item" value="blankets">
+       <label for="blankets"><img src="icons/blankets.svg" class="img-check">
+      <p class="caption">Blankets</p></label>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-6">
+     <input type="checkbox" id="furniture" name="item" value="furniture">
+       <label for="furniture"><img src="icons/sofa.svg" class="img-check">
+      <p class="caption"> Furniture</p></label>
+    </div>
+    <div class="col-md-2  col-sm-4 col-xs-6">
+      <input type="checkbox" id="bart tickets" name="item" value="bart tickets"/>
+        <label for="bart tickets"><img src="icons/bart.svg" class="img-check"/>
+      <p class="caption">BART/MUNI Tickets</p></label>
+    </div>
+    
+    <div class="col-md-2 col-sm-4 col-xs-6">
+     <input type="checkbox" id="toothbrush paste" name="item" value="toothbrush/paste"/>
+      <label for="toothbrush paste"><img src="icons/toothbrush.svg" class="img-check"/>
+      <p class="caption">Toothbrush & Toothpaste</p></label>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-6">
+    <input type="checkbox" id="towels" name="item" value="towels">
+      <label for="towels"><img src="icons/towel.svg" class="img-check"/>
+      <p class="caption">Towels</p></label>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-6">
+       <input type="checkbox" id="razor" name="item"" value="razor">
+      <label for="razor"><img src="icons/razor.svg" class="img-check">
+      <p class="caption">Razors</p></label>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-6">
+       <input type="checkbox" id="toilet paper" name="item" value="toilet paper">
+      <label for="toilet paper"><img src="icons/toilet-paper.svg" class="img-check">
+     <p class="caption">Toilet Paper</p></label>
+    </div>
+    <div class="col-md-2 col-sm-4 col-xs-6">
+      <input type="checkbox" id="laundry detergent" name="item" value="laundry detergent">
+      <label for="laundry detergent"><img src="icons/detergent.svg" class="img-check">
+     <p class="caption">Laundry Detergent</p></label>  
+    </div>
+  </div> <!-- end row-->
   <div class="row">
    <div class="col-md-12 col-xs-12 text-center">
-        <input type="submit" value="Donate" class="btn" id="submitNeeds">
+      <input type="submit" value="Donate" class="btn" id="submitNeeds">
    </div>
   </div>
-  </form>
-  
- </div> <!-- end container-fluid-->
+ </form>
+</div> <!-- end container-fluid-->
 
   <script>
   $('#myCarousel').on('slide.bs.carousel', function () {
