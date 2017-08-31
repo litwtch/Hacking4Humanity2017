@@ -1,3 +1,5 @@
+/*********** Model *********/
+
 function shelterList(){
   this.shelters = [];
 }
@@ -51,6 +53,8 @@ var findOne = function (haystack, arr) {
     });
 };
 
+
+/*********** Controller *********/
 var controller = {
   initApp: function(){
     model.initApp();
@@ -68,8 +72,6 @@ var controller = {
       var needs= obj["needs"];
       model.app.addNeeds(needs);
       });
-      //userList.sortUsers();
-      //view.displayUsers(userList.users);
     }else{
        // We reached our target server, but it returned an error   
     }
@@ -126,6 +128,8 @@ var controller = {
     request.send();
  });
 },
+
+/*Creates elements to show shelters in each shelter-card.*/
 postShelters: function(shelter){
   var shelterList = document.getElementById("shelter-list");
   shelterList.innerHTML = ""; 
@@ -141,9 +145,13 @@ postShelters: function(shelter){
     shelterCard.className = "shelter-card";
     col_md_4.appendChild(shelterCard); 
 
+    var wrapper = document.createElement("div");
+    wrapper.className = "wrapper";
+    shelterCard.appendChild(wrapper); 
+
     var cardImg = document.createElement("div");
     cardImg.className = "card-img";
-    shelterCard.appendChild(cardImg); 
+    wrapper.appendChild(cardImg); 
 
     var card_img_src = document.createElement("img");
     card_img_src.className = "card-img_src";
@@ -156,7 +164,7 @@ postShelters: function(shelter){
     h4.id = "shelterName"
     h4.className = "name";
     h4.innerHTML = s.name;
-    shelterCard.appendChild(h4); 
+    wrapper.appendChild(h4); 
 
     var p = document.createElement("p");
     var needStr = "";
@@ -164,7 +172,7 @@ postShelters: function(shelter){
         needStr += item + ", ";
     });
     p.innerHTML = "Needs: " + needStr.substr(0,needStr.length-2);
-    shelterCard.appendChild(p); 
+    wrapper.appendChild(p); 
 
     var a = document.createElement("a");
     a.href = s.website;
@@ -172,7 +180,7 @@ postShelters: function(shelter){
     a.className = "btn";
     a.classList.add('donateBtn');
     a.innerHTML ="Donate"
-    shelterCard.appendChild(a); 
+    wrapper.appendChild(a); 
  });
   view.setUpEventListeners();
 },
@@ -197,6 +205,7 @@ function getUrlVars(){
   return vars;
 }
 
+/*********** View *********/
 var view = {
   setUpEventListeners: function(){
     var donateBtns= document.getElementsByClassName("donateBtn");
