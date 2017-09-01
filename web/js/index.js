@@ -76,7 +76,7 @@ var fbShareDialogParams = {
   display: 'popup',
   mobile_iframe: true,
   href: 'http://www.maribelduran.com/Hacking4Humanity2017/web/index.html',
-  picture: 'https://github.com/maribelduran/Hacking4Humanity2017/blob/master/web/images/EmpowHer-SF.svg',
+  picture: 'https://raw.githubusercontent.com/maribelduran/Hacking4Humanity2017/master/web/images/EmpowerHerSF_square.png',
   description: 'I am fighting against Human Trafficking by helping women shelters in SF. Come join the movement.',
   caption: 'EMPOWERHER:SF',
   quote: 'Be the change that you wish to see in the world.” -Gandhi',
