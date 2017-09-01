@@ -261,3 +261,7 @@ view.setUpEventListeners();
 var needs = getUrlVars();
 controller.showSelectedNeeds(needs);
 controller.retrieveShelters(needs);
+
+$(document).ready(function () {
+   $("#myModal").modal("show");
+});
