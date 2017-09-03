@@ -213,7 +213,6 @@ postShelters: function(shelter){
     a.innerHTML ="Donate"
     wrapper.appendChild(a); 
  });
-  view.addEventListeners();
 },
 showSelectedNeeds: function(needs){
 	if( needs[0] !== "undefined" && needs[0] !== undefined){
@@ -238,16 +237,7 @@ function getUrlVars(){
 
 /*********** View *********/
 var view = {
-  addEventListeners: function(){
-    var donateBtns= document.getElementsByClassName("donateBtn");
-    for (var i = 0; i < donateBtns.length; i++) {
-      donateBtns[i].addEventListener("click", function(){
-         //	var url = $(this).attr('href'); 
-           $("#myModal").modal("show");
-		  });
-    }
- },
- setUpEventListeners: function(){
+  setUpEventListeners: function(){
    var btn_share_fb=document.getElementById("btn-share-fb");
    btn_share_fb.addEventListener("click", function(){
       FB.ui(fbShareDialogParams, function(response) {});
