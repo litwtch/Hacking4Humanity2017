@@ -140,7 +140,6 @@ p {
   height: 100%;  
   position: relative;
 }
-
 .carousel-inner > .item > img {
   height: 100%;
   width: 100%;
@@ -152,7 +151,6 @@ p {
      font-size: 30px;
      line-height: 1.4;
    }
-
   #countdownTime{
    font-size: 40px !important;
  }
@@ -173,10 +171,8 @@ p {
   }
  #countDownText{
   font-size: 12px !important;
- }
-
+  }
 }
-
 
 /* ---------- COUNTDOWN --------- */
 .purple-header{
@@ -234,7 +230,7 @@ img {
 }
 
 .item-row{
-<<<<<<< HEAD
+
   display: flex !important;
   display: -webkit-flex;
   -webkit-flex-wrap: wrap;
@@ -242,9 +238,6 @@ img {
   align-items: flex-end;
   padding-left: 50px;
   padding-right: 50px;
-=======
->>>>>>> 93683ab4c80c475b84a3ed4c0ab7405576a90e28
-}
 
 .img-check{
   cursor: pointer;
@@ -410,6 +403,20 @@ label img {
 
 .modal-body{
   margin: 15%;
+=======
+.check{
+  opacity:0.5;
+  filter:saturate(8);
+}
+
+.check .caption{
+  opacity:0.5;
+   filter:saturate(8);
+}
+
+.btn{
+  width: 100% !important;
+
   margin-top: 10px;
 }
 
@@ -420,6 +427,7 @@ label img {
 .emphasize-text{
  font-size: 22px;
 }
+
 
 .size-40{
   font-size: 40px !important;
@@ -457,4 +465,27 @@ label img {
  } 
 }
 
+.item-row{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-end;
+  padding-left: 50px;
+  padding-right: 50px;
+}
 
+.img-check{
+  cursor: pointer;
+   transition: transform .4s;
+}
+
+.caption{
+  margin-top: 30px;
+}
+
+.col-sm-4 {
+  margin-bottom: 30px !important;
+}
+
+.img-check:hover{
+   transform: scale(1.10);  
+}
